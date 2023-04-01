@@ -1,2 +1,25 @@
-<Button>:
-    font_size: 50
+<Interfaz>:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    Label:
+        id:mesas_disponibles
+        text: 'Mesas Disponibles: '
+        font_size: 30
+
+    Label:
+        id:mesas_ocupadas
+        text: 'Mesas Ocupadas: '
+        font_size: 30
+
+    Label:
+        id:fecha
+        text: 'Fecha/Hora: '
+        font_size: 30
+
+    Button:
+        text: 'Actualizar'
+        size_hint_y: None
+        height: 50
+        on_press: root.on_button_press()
