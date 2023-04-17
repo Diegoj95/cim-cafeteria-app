@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = CimApp
 
 # (str) Package name
-package.name = myapp
+package.name = cimapp
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -13,7 +13,8 @@ package.domain = org.test
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,json
+source.include_patterns = gs_credentials.json
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -37,7 +38,10 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,gspread,oauth2client
+requirements = python3,kivy,google-auth,google-auth-oauthlib,httplib2,pyasn1,pyasn1-modules,rsa,oauth2client,requests,gspread,cachetools,urllib3,chardet,charset_normalizer,idna,requests_oauthlib,oauthlib,pyparsing
+
+pypi_modules = pyparsing
+
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -67,8 +71,7 @@ orientation = portrait
 osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
-
+osx.kivy_version = 2.1.0
 #
 # Android specific
 #
@@ -96,6 +99,8 @@ fullscreen = 0
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
 #android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
+android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE
+
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host

@@ -2,24 +2,57 @@
     orientation: 'vertical'
     spacing: 10
     padding: 10
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
     Label:
         id:mesas_disponibles
-        text: 'Mesas Disponibles: '
-        font_size: 30
+        text: 'Mesas Disponibles:'
+        font_size: 60
+        color: 0, 0, 0, 1
+
+    Widget:
+        size_hint_y: None
+        height: 2
+        canvas:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
     Label:
         id:mesas_ocupadas
-        text: 'Mesas Ocupadas: '
-        font_size: 30
+        text: 'Mesas Ocupadas:'
+        font_size: 60
+        color: 0, 0, 0, 1
+
+    Widget:
+        size_hint_y: None
+        height: 2
+        canvas:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
 
     Label:
         id:fecha
-        text: 'Fecha/Hora: '
-        font_size: 30
+        text: 'Fecha/Hora:'
+        font_size: 60
+        color: 0, 0, 0, 1
+
 
     Button:
         text: 'Actualizar'
         size_hint_y: None
-        height: 50
+        width: 100 # Anchura fija del botón
+        height: 100
+        font_size: 60
+        background_color: 0, 0, 1, 1 # Color de fondo del botón en azul
         on_press: root.on_button_press()

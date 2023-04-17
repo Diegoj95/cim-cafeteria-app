@@ -6,16 +6,18 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 
-creds = ServiceAccountCredentials.from_json_keyfile_name('gs_credentials.json', scope)
 
-client = gspread.authorize(creds)
+try:
+    creds = ServiceAccountCredentials.from_json_keyfile_name('gs_credentials.json', scope)
+    client = gspread.authorize(creds)
+    sheet = client.open('DatosCafeteria').sheet1
+except Exception as e:
+    print(e)
 
-sheet = client.open('DatosCafeteria').sheet1
 
 Builder.load_file('interfaz.kv')
 
 class Interfaz(BoxLayout):
-
     def on_button_press(self):
         # Retrieve the last row of data from the sheet
         data = sheet.get_all_values()[-1]
