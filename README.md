@@ -26,8 +26,7 @@ Con la aplicación los usuarios pueden obtener acceso a la información proporci
 
 
 ## Imágenes de la aplicación
-![a](https://i.imgur.com/3WhIqCP.jpg)
-![b](https://i.imgur.com/Na0NE4O.jpg)
+![a](https://i.imgur.com/JsKCOlL.jpg)
 
 
 ## Construido con
