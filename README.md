@@ -14,7 +14,7 @@
 
 ## Breve descripción
 
-Este prototipo fue desarrollado como tarea durante práctica profesional en el CIMUBB de la Universidad del Bío-Bío. Consiste en mostrar datos recopilados por una aplicación que utiliza reconocimiento de imágenes. 
+Este prototipo fue desarrollado como tarea durante práctica profesional en el CIMUBB de la Universidad del Bío-Bío durante el primer semestre del año 2023. Consiste en mostrar datos recopilados por una aplicación que utiliza reconocimiento de imágenes. 
 ### ¿Cuál es el problema?
 
 Estudiantes, funcionarios o docentes en la Universidad necesitan saber la disponibilidad de mesas libres en el casino de la Universidad para poder ir a comer tranquilamente.
